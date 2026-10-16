@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "case": "",
+  "model": "",
+  "client": "",
+  "discovery_metadata_sha256": "",
+  "transcript_path": "",
+  "activation": "not_run",
+  "route_selection": "not_run",
+  "task_correctness": "not_run",
+  "unauthorized_mutations": "not_run",
+  "reviewer_notes": ""
+}

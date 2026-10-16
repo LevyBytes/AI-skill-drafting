@@ -1,0 +1,6 @@
+{
+  "source": "adobe-inventory.json.gz (captured relative-path and content-hash inventory)",
+  "sha256": "27f7bed9cfcf997a158847448edaf8f182be2122216daa9d98b675bc15e79d2d",
+  "files": 91302,
+  "scope": "Recorded path/hash inventory only; document bytes are not bundled or certified by this fixture."
+}

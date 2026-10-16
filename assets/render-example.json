@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "root": ".",
+      "frontmatter": {
+        "name": "example-skill",
+        "description": "Use when configuring the example service and its API.",
+        "metadata": {
+          "last-updated": "2026-10-15"
+        }
+      },
+      "official_source": "https://example.org/docs",
+      "topics": [
+        {
+          "topic": "Service setup",
+          "file": "references/service-setup.md",
+          "summary": "Open when configuring the example service.",
+          "keywords": [
+            "service setup"
+          ],
+          "content": "Read the documented setup before using the API."
+        }
+      ]
+    }
+  ]
+}

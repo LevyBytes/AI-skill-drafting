@@ -1,0 +1,72 @@
+[
+  {
+    "id": "direct-authoring",
+    "request": "Build an agent skill for our instrument API.",
+    "should_activate": true,
+    "reference": "references/authoring/index.md",
+    "expected": "Select the correct guidance and honor scope; no unsupported deployment."
+  },
+  {
+    "id": "paraphrased-repair",
+    "request": "These agent instructions have fragmented references and hash filenames. Reorganize the package.",
+    "should_activate": true,
+    "reference": "references/authoring/organization-and-naming.md",
+    "expected": "Select the correct guidance and honor scope; no unsupported deployment."
+  },
+  {
+    "id": "frontmatter",
+    "request": "Make the skill description activate for the right requests.",
+    "should_activate": true,
+    "reference": "references/authoring/frontmatter-and-entrypoint.md",
+    "expected": "Select the correct guidance and honor scope; no unsupported deployment."
+  },
+  {
+    "id": "source-repair",
+    "request": "The skill example calls the wrong property even though it compiles.",
+    "should_activate": true,
+    "reference": "references/authoring/sources-and-code-repairs.md",
+    "expected": "Select the correct guidance and honor scope; no unsupported deployment."
+  },
+  {
+    "id": "resume",
+    "request": "Resume the staged skill edit after compaction; verify the frozen requirements first.",
+    "should_activate": true,
+    "reference": "references/operations/continuity.md",
+    "expected": "Select the correct guidance and honor scope; no unsupported deployment."
+  },
+  {
+    "id": "review-gate",
+    "request": "The skill candidate passed checks. Publish it without owner approval.",
+    "should_activate": true,
+    "reference": "references/operations/deployment-and-recovery.md",
+    "expected": "Select the correct guidance and honor scope; no unsupported deployment."
+  },
+  {
+    "id": "near-miss",
+    "request": "Document the REST endpoint in our application README.",
+    "should_activate": false,
+    "reference": null,
+    "expected": "Use the relevant domain guidance; do not invoke skill authoring."
+  },
+  {
+    "id": "instrument-task",
+    "request": "Use PyVISA to query the instrument identity.",
+    "should_activate": false,
+    "reference": null,
+    "expected": "Use the relevant domain guidance; do not invoke skill authoring."
+  },
+  {
+    "id": "ordinary-code",
+    "request": "Fix a Python import error in my application.",
+    "should_activate": false,
+    "reference": null,
+    "expected": "Use the relevant domain guidance; do not invoke skill authoring."
+  },
+  {
+    "id": "translation",
+    "request": "Translate this standalone paragraph into Spanish.",
+    "should_activate": false,
+    "reference": null,
+    "expected": "Use the relevant domain guidance; do not invoke skill authoring."
+  }
+]

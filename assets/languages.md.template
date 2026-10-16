@@ -1,0 +1,11 @@
+# Reference language selection
+
+Use the explicit reference-language preference first, otherwise the request language.
+Select only a translation listed below. If unavailable, use English and disclose the fallback.
+The response language is independent of the reference language.
+
+$translations
+
+## English references
+
+$english

@@ -1,0 +1,38 @@
+# Regression and behavior checks
+
+Open when proving the authoring tools prevent a known defect.
+
+Run `scripts/tests/run.py --work <new-disjoint-test-directory>` with the selected interpreter.
+Tests leave inspectable artifacts outside the skill. Set PYTHONDONTWRITEBYTECODE=1 to
+avoid caches in the installed package. Review test code before running it.
+
+Pair each real defect with a failing input, repaired output and meaningful assertion:
+
+- Tauri: flattened comments hide imports/calls; retain a reviewed repaired example.
+- Turso/Lumberyard: organize first, then reject repeated ancestors and nested references.
+- PyVISA: distinguish implementation excerpts from API contracts despite shared names.
+- PyMeasure: strict property mocks catch wrong settings; preserve valid delta defaults.
+- Blender/Python/Adobe: preserve preambles, API ownership, complete declarations and
+  tables; catch hidden literals, malformed fences and missing HTML image targets.
+- Common:99/100/101 lines, collisions, missing translations, malformed catalogs,
+  frozen-artifact drift, wrong approval, interruption/resume and safe rollback.
+- Adobe paths: reject the captured long names; accept reviewed short destinations.
+  Exercise name lengths 63/64/65, relative paths 159/160/161, single depths 3/4/5,
+  collection depths 5/6/7, missing or false collection declarations,
+  Unicode code points, binary and empty-directory paths, and product-root prefixes.
+  A target overrun alone must pass; hard overruns must block rendering and preparation.
+  A malformed nested skill must not grant the collection depth allowance.
+
+Behavior examples must exercise an actual result, not merely duplicate implementation.
+A syntax check cannot detect assigning a nonexistent dynamic property or wrong API owner.
+A mock proves only the modeled contract; a native application test proves a different scope.
+Use adversarial inputs and positive controls to avoid overzealous “repairs”.
+
+The software suite in scripts/tests uses disposable new, repaired and multi-product skills.
+Agent-use tasks and their inputs live separately in evals; their scores require actual runs. A large recorded
+inventory regression exercises path-scale inspection separately; it does not claim that
+every real document was semantically reviewed by a test.
+
+Record interpreter/dependency versions, passed/failed/not-run checks and exact outputs.
+Do not execute arbitrary code from a proposal as part of verify. Explicitly review and
+run bounded behavior fixtures in a separate disposable environment.

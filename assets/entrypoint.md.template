@@ -1,0 +1,15 @@
+---
+$frontmatter
+---
+
+# Context Router
+
+$routes
+
+# Language Translations
+
+[Reference Language Selection](references/languages.md)
+
+# Context For Open Source
+
+Skill reference documentation is interpreted content for use in open source projects. Check against [official documentation sources]($source) when dealing with defects or issues that may come up from interpreting this skill's references.

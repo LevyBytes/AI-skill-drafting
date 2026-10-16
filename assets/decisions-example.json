@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "name": "example-skill",
+  "roots": [
+    "."
+  ],
+  "sources": {},
+  "created": {
+    "references/service-setup.md": "Explicit test package output.",
+    "references/languages.md": "Explicit test package output.",
+    "references/topics.json": "Explicit test package output.",
+    "SKILL.md": "Explicit test package output.",
+    "assets/.gitkeep": "Explicit test package output.",
+    "scripts/.gitkeep": "Explicit test package output.",
+    "evals/.gitkeep": "Explicit test package output."
+  },
+  "reviews": {
+    "organization": "One coherent setup topic.",
+    "source_fidelity": "Fixture bytes inspected.",
+    "behavior": "Text fixture; no external application execution."
+  }
+}

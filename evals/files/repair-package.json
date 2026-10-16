@@ -1,0 +1,14 @@
+{
+  "fixture_kind": "Synthetic damaged package; API correction is backed by the accompanying captured source contract.",
+  "skill_name": "spectrum-analyzer",
+  "files": {
+    "LICENSE": "Fixture content is supplied for this evaluation. Preserve this notice verbatim.\n",
+    "references/measurement/measurement/sweep-a12b34c56d.md": "# Sweep example\n\n```python\n# Configure the analyzerfsl.continuous_sweep = False\nfsl.single_sweep()\n```\n",
+    "references/measurement/measurement/sweep-f12b34c56d.md": "# Sweep control contract\n\nThe sweep control reports whether acquisition repeats automatically. This is API contract material, not a runnable example.\n",
+    "references/measurement/assets/.gitkeep": "",
+    "references/measurement/scripts/.gitkeep": "",
+    "references/measurement/evals/.gitkeep": ""
+  },
+  "preserve_fact": "A default delta marker uses number two. Do not change it to one merely for symmetry.",
+  "scope": "Stage a complete skill from this file map; preserve distinct guide and API content, the license, and explicit source-version context."
+}

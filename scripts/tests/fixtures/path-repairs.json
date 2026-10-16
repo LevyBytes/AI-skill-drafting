@@ -1,0 +1,57 @@
+{
+  "source": "Owner-reported Adobe Windows path failures",
+  "cases": [
+    {
+      "before": "after-effects/references/desktop/compositions/precomposing-and-nesting/precomposing-nesting-and-pre-rendering-about-precomposing-and-nesting/precomposing-nesting-and-pre-rendering-effects-can-include-masks-and-effects-of-other-layers.md",
+      "after": "after-effects/references/desktop/compositions/precomposing-and-nesting/effect-input-masks.md"
+    },
+    {
+      "before": "after-effects/references/desktop/compositions/precomposing-and-nesting/precomposing-nesting-and-pre-rendering-about-precomposing-and-nesting/precomposing-nesting-and-pre-rendering-preferences-and-composition-settings-that-affect-nested-compositions.md",
+      "after": "after-effects/references/desktop/compositions/precomposing-and-nesting/nested-composition-settings.md"
+    },
+    {
+      "before": "after-effects/references/desktop/render-and-export/automate-rendering/automated-rendering-and-network-rendering-automating-rendering-with-aerender/automated-rendering-and-network-rendering-network-rendering-with-watch-folders-and-render-engines.md",
+      "after": "after-effects/references/desktop/render-and-export/automate-rendering/watch-folders-and-render-engines.md"
+    },
+    {
+      "before": "after-effects/references/desktop/render-and-export/automate-rendering/automated-rendering-and-network-rendering-automating-rendering-with-aerender/automated-rendering-and-network-rendering-track-dependencies-of-a-watch-folder-render.md",
+      "after": "after-effects/references/desktop/render-and-export/automate-rendering/watch-folder-render-dependencies.md"
+    },
+    {
+      "before": "after-effects/references/desktop/work-with-3-d-composition/create-realistic-reflections-and-ambient-lighting/create-realistic-reflections-and-ambient-lighting-in-a-3-d-scene/set-an-object-to-bypass-lights-and-shadows-in-your-scene.md",
+      "after": "after-effects/references/desktop/work-with-3-d-composition/environment-lighting/accepts-lights-switch.md"
+    },
+    {
+      "before": "incopy/references/desktop/format-text/cjk-and-multilingual-text/changing-spacing-between-charactersin-cjk-text-adjust-kerning-for-the-half-width-space-between-roman-words/changing-spacing-between-charactersin-cjk-text-adjust-character-tsume-in-cjk-composition.md",
+      "after": "incopy/references/desktop/format-text/cjk-and-multilingual-text/character-tsume.md"
+    },
+    {
+      "before": "incopy/references/desktop/format-text/cjk-and-multilingual-text/changing-spacing-between-charactersin-cjk-text-adjust-kerning-for-the-half-width-space-between-roman-words/changing-spacing-between-charactersin-cjk-text-adjust-tracking-by-using-grid-jidori.md",
+      "after": "incopy/references/desktop/format-text/cjk-and-multilingual-text/grid-jidori.md"
+    },
+    {
+      "before": "incopy/references/desktop/format-text/cjk-and-multilingual-text/changing-spacing-between-charactersin-cjk-text-adjust-kerning-for-the-half-width-space-between-roman-words/changing-spacing-between-charactersin-cjk-text-using-grid-tracking-to-adjust-character-spacing.md",
+      "after": "incopy/references/desktop/format-text/cjk-and-multilingual-text/grid-tracking.md"
+    },
+    {
+      "before": "premiere-pro/references/desktop/add-text-and-images/insert-images-and-graphics/preserve-intro-and-outro-animations-while-creating-responsive-design-graphics/define-intro-and-outro-segments-and-preserve-animations-using-the-effect-controls-panel.md",
+      "after": "premiere-pro/references/desktop/add-text-and-images/insert-images-and-graphics/responsive-design/intro-outro-effect-controls.md"
+    },
+    {
+      "before": "premiere-pro/references/desktop/add-text-and-images/insert-images-and-graphics/preserve-intro-and-outro-animations-while-creating-responsive-design-graphics/define-intro-and-outro-segments-and-preserve-animations-using-the-properties-panel.md",
+      "after": "premiere-pro/references/desktop/add-text-and-images/insert-images-and-graphics/responsive-design/intro-outro-properties.md"
+    },
+    {
+      "before": "premiere-pro/references/desktop/troubleshooting/audio-issues/playback-issues-due-to-missing-sound-from-some-of-the-clips-check-for-muted-or-low-track-volume/playback-issues-due-to-missing-sound-from-some-of-the-clips-check-for-clips-with-incompatible-codecs.md",
+      "after": "premiere-pro/references/desktop/troubleshooting/audio-issues/incompatible-audio-codecs.md"
+    },
+    {
+      "before": "premiere-pro/references/desktop/troubleshooting/audio-issues/playback-issues-due-to-missing-sound-from-some-of-the-clips-check-for-muted-or-low-track-volume/playback-issues-due-to-missing-sound-from-some-of-the-clips-check-for-muted-low-volume-or-disabled-clips.md",
+      "after": "premiere-pro/references/desktop/troubleshooting/audio-issues/muted-or-disabled-clips.md"
+    },
+    {
+      "before": "premiere-pro/references/desktop/troubleshooting/audio-issues/playback-issues-due-to-missing-sound-from-some-of-the-clips-check-for-muted-or-low-track-volume/playback-issues-due-to-missing-sound-from-some-of-the-clips-missing-audio-or-video-in-the-footage.md",
+      "after": "premiere-pro/references/desktop/troubleshooting/audio-issues/missing-media-streams.md"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# {{skill_title}}
+
+```mermaid
+{{mermaid_header_body}}
+```
+
+{{professional_brief}}
+
+{{skill_description_exact}}
+
+## What this skill helps with
+
+{{useful_capabilities_with_reference_links}}
+
+{{complete_subskills_section_if_applicable}}
+
+## The work behind the references
+
+{{truthful_summary_of_interpretation_organization_and_verification}}
+
+## Start here
+
+Start with [SKILL.md](SKILL.md) and follow its context routes.
+
+{{relevant_usage_and_version_limits}}
+
+## Sources and license
+
+Skill reference documentation is interpreted content for use in open source projects. Check against [official documentation sources]({{official_source_url}}) when dealing with defects or issues that may come up from interpreting this skill's references.
+
+Licensed under **AGPL-3.0**; see [LICENSE]({{license_relative_path}}). Part of the [Agent Kaizen](https://github.com/LevyBytes/agent-kaizen) skill library.

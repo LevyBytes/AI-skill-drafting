@@ -1,0 +1,37 @@
+{
+  "fixture_kind": "Synthetic owner brief for a realistic authoring task, not a published product API.",
+  "skill_name": "diagnostic-json",
+  "purpose": "Help engineers inspect JSON Lines diagnostic exports and report malformed records without losing original evidence.",
+  "activation_examples": [
+    "Find malformed records in this diagnostics export.",
+    "Explain why these JSON log rows fail parsing."
+  ],
+  "negative_examples": [
+    "Create a generic log-retention policy.",
+    "Change the production logging service."
+  ],
+  "source": "https://docs.python.org/3.12/library/json.html",
+  "requirements": [
+    "Keep the original export unchanged.",
+    "Report one-based line numbers and JSON decoding failures.",
+    "Do not silently repair malformed records.",
+    "Separate reusable instructions from reference details.",
+    "Use the supplied skill profile and stage only."
+  ],
+  "sample_input": "{\"event\":\"start\",\"sequence\":1}\n{\"event\":\"reading\",\"sequence\":2\n{\"event\":\"stop\",\"sequence\":3}\n",
+  "profile": {
+    "reference_physical_line_limit": 100,
+    "root_folders": [
+      "references",
+      "assets",
+      "scripts",
+      "evals"
+    ],
+    "headings": [
+      "Context Router",
+      "Language Translations",
+      "Context For Open Source"
+    ],
+    "translations": []
+  }
+}

@@ -1,0 +1,16 @@
+# Working checkpoint
+
+Before resuming, read the frozen REQUIREMENTS.md in full and verify its hash through status.
+Then read the current owner direction, manifest.json, decisions.json and this checkpoint.
+Investigate changed hashes before writing. Do not replay completed transactions.
+
+State: $state
+Input: $input
+Candidate: $candidate
+Prepared manifest digest: $manifest_digest
+Completed outcomes: $outcomes
+Next authorized action: $next_action
+Review gate: $review_gate
+
+Record later owner decisions separately. Do not silently rewrite frozen requirements.
+This document is a resume obligation, not an installed compaction hook.

@@ -1,0 +1,57 @@
+{
+  "skill_name": "skill-drafting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a portable diagnostic-json skill from the supplied brief. Make it useful for engineers inspecting malformed JSON Lines exports. Stage the complete package for review; preserve the input and do not deploy. Supply a file map and report exactly what you verified.",
+      "expected_output": "A coherent staged package with actionable activation boundaries, complete reference guidance, a generic language selector, accurate source context and a review report. The malformed sample is recognized at line two without inventing a fix or changing the original.",
+      "files": [
+        "evals/files/new-skill-brief.json"
+      ],
+      "assertions": [
+        "All four required root folders exist with no duplicated area scaffolding.",
+        "SKILL.md has supported frontmatter and the three profile sections in order.",
+        "Every reference has at most 100 physical lines, including catalogs.",
+        "The diagnostic example identifies the malformed second record and preserves original data.",
+        "Language routing lists no nonexistent translations.",
+        "Source mapping, atomic file tasks and verification results are provided.",
+        "No live skill or external service was modified."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Repair this spectrum-analyzer skill fixture. Its repeated folders, hash filenames and sweep examples look damaged. Use the accompanying captured source contract, retain distinct guide/API material, and preserve valid behavior and licensing. Stage your correction and explain the evidence and testing limits.",
+      "expected_output": "A complete staged skill with subject-based paths, descriptive filenames, repaired comment/newline structure, the documented sweep property, clear initialization requirements and preserved MARK/DELT2 behavior. The report distinguishes source evidence, syntax/mocks and hardware tests.",
+      "files": [
+        "evals/files/repair-package.json",
+        "evals/files/captured-source-contract.json"
+      ],
+      "assertions": [
+        "No repeated ancestor names or hash-suffixed reference filenames remain.",
+        "Guide and API contract content remain distinct and reachable.",
+        "Area assets/scripts/evals placeholders are absent and root scaffolding is correct.",
+        "The example uses continuous_sweep_enabled with intact newlines and initialized fsl context.",
+        "The license is byte-identical and the valid DELT2 default is retained.",
+        "Every source file has a disposition and all changed outputs have prepared tasks.",
+        "The report does not claim hardware execution or a fresh source fetch without evidence."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Build the data-utilities collection from this brief, with two explicitly recognized product skills. Prepare and stage it. Then explain and demonstrate in disposable files how you handle the stated resume event: a changed input and approval for a different candidate. Do not deploy anything live.",
+      "expected_output": "Reachable product skills with correctly scoped reference trees and root folders, full prepared records, and a resume demonstration that preserves the owner edit and refuses the mismatched approval. Requirements and mutable progress are separate.",
+      "files": [
+        "evals/files/product-and-resume-brief.json"
+      ],
+      "assertions": [
+        "The collection routes through its references to both declared product skills.",
+        "Only explicitly declared product roots receive the four-folder template.",
+        "All product routes, catalogs and local fragments resolve.",
+        "Input drift is detected before candidate application and the owner edit is preserved.",
+        "An approval digest for different bytes cannot authorize deployment.",
+        "No old prepared work is replayed over a newer revision.",
+        "The handoff records frozen requirements, current artifact hashes, completed outcomes and the next authorized action."
+      ]
+    }
+  ]
+}
