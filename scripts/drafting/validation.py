@@ -63,9 +63,6 @@ def verify_files(files, name, roots=(".",), dispositions=()):
             directory_spellings[key] = directory
             if key in file_names:
                 issue(path, "file_directory_collision")
-        directories = [p.casefold() for p in parts[:-1]]
-        if len(set(directories)) != len(directories):
-            issue(path, "repeated_ancestor")
         if re.search(r"-(?:[a-f0-9]{8,}|part-?\d+|\d+)\.md$", path):
             issue(path, "suspect_ordinal_or_hash_name")
         if len(parts) > 1 and parts[-1] == ".gitkeep" and parts[-2] in {"assets", "scripts", "evals"}:

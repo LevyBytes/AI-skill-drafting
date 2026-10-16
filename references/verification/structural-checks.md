@@ -9,6 +9,12 @@ entrypoint sections, disclaimer, language-section exclusivity and root folder pr
 
 It checks LF/UTF-8 text, the 100-physical-line cap, repeated ancestor names, case collisions,
 suspect ordinal/hash names, misplaced empty templates and heading-only fragments.
+Ancestor repetition includes singular/plural variants, both orders, case differences
+and separated ancestors, including empty directories and collection prefixes.
+Common English regular inflections and explicit irregular noun pairs are compared
+across complete directory names. Qualifiers remain significant; `integer-input` is
+distinct from `input`. Other language/domain inflections still need contextual review.
+The same unwaivable check runs during verify, render and preparation before application.
 It enforces the [name and path bounds](../authoring/organization-and-naming.md):
 64 characters per filename (including extension) or folder name, 160 characters
 per repository-relative file path, four directory levels for single skills and six

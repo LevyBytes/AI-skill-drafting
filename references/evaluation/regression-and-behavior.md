@@ -10,6 +10,10 @@ Pair each real defect with a failing input, repaired output and meaningful asser
 
 - Tauri: flattened comments hide imports/calls; retain a reviewed repaired example.
 - Turso/Lumberyard: organize first, then reject repeated ancestors and nested references.
+- Python/Discord/PyMeasure: reject singular/plural ancestor repetition such as
+  `references/reference` and `adapters/adapter`, including separated or empty folders.
+  Preserve distinct qualifiers and exact API identifiers; reject before rendering or
+  snapshot creation. Include negative controls for words such as `status` and `news`.
 - PyVISA: distinguish implementation excerpts from API contracts despite shared names.
 - PyMeasure: strict property mocks catch wrong settings; preserve valid delta defaults.
 - Blender/Python/Adobe: preserve preambles, API ownership, complete declarations and

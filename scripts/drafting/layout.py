@@ -22,7 +22,6 @@ def check_empty_directories(root, roots, warnings=None):
         path = safe_root(folder)
         if path == root or dirs or files:
             continue
-        parts = path.relative_to(root).parts
         bounds = check_paths(directories=[path.relative_to(root).as_posix()], collection=collection)
         for finding in bounds["errors"]:
             if finding not in errors:
@@ -31,7 +30,4 @@ def check_empty_directories(root, roots, warnings=None):
             warnings.extend(finding for finding in bounds["warnings"] if finding not in warnings)
         if path.name in {"assets", "scripts", "evals"} and path.parent not in owners:
             errors.append({"path": path.relative_to(root).as_posix(), "code": "misplaced_empty_template"})
-        folded = [p.casefold() for p in parts]
-        if len(set(folded)) != len(folded):
-            errors.append({"path": path.relative_to(root).as_posix(), "code": "repeated_ancestor"})
     return errors

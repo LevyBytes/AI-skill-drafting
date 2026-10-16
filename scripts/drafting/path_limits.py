@@ -1,6 +1,7 @@
 """Portable owner-profile bounds, measured from the whole package root."""
 from pathlib import PurePosixPath
 from .storage import relative
+from .ancestor_names import repeated_ancestors
 
 # Owner-selected values; these are not Agent Skills interchange requirements.
 # Names include extensions. Paths use one "/" separator and Unicode code points.
@@ -42,5 +43,8 @@ def check_paths(files=(), directories=(), *, collection=False):
         ancestors(parts)
         measure(name, "directory_depth", len(parts))
     for name in sorted(folders):
-        measure(name, "directory_name", len(PurePosixPath(name).name))
+        parts = PurePosixPath(name).parts
+        measure(name, "directory_name", len(parts[-1]))
+        for conflict in repeated_ancestors(parts):
+            errors.append({"path": name, "code": "repeated_ancestor", "detail": conflict})
     return {"errors": errors, "warnings": warnings, "limits": limits}

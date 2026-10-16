@@ -28,8 +28,12 @@ The main root has references, assets, scripts and evals. Empty template folders 
 A genuine multi-product collection can contain product skills with their own trees.
 Do not invent additional folders or remove populated folders during scaffold cleanup.
 
-Repair organization before flattening. Check every ancestor, including separated and
-case-varied repeats. If `animation/animation` remains, combine that redundant layer.
+Repair organization before flattening. Check every ancestor, including separated,
+case-varied and singular/plural repeats. `references/reference`, `guilds/guild`,
+`adapters/adapter` and `references/components/reference` are redundant nesting too.
+Use the actual subject to name an area, such as `references/language` for Python's
+language definition. Preserve distinct API class ownership when reorganizing classes.
+If a redundant layer remains after organization, combine it while preserving contents.
 If names collide, compare both contents, preserve distinct subjects and update indexes.
 Never overwrite the destination or append a hash/counter to avoid the decision.
 
