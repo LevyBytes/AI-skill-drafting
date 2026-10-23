@@ -1,7 +1,7 @@
 [
   {
     "id": "direct-authoring",
-    "request": "Build an agent skill for our instrument API.",
+    "request": "Build an agent skill for our internal billing API.",
     "should_activate": true,
     "reference": "references/authoring/index.md",
     "expected": "Select the correct guidance and honor scope; no unsupported deployment."
@@ -49,8 +49,8 @@
     "expected": "Use the relevant domain guidance; do not invoke skill authoring."
   },
   {
-    "id": "instrument-task",
-    "request": "Use PyVISA to query the instrument identity.",
+    "id": "domain-task",
+    "request": "Retry the failed jobs in our print queue.",
     "should_activate": false,
     "reference": null,
     "expected": "Use the relevant domain guidance; do not invoke skill authoring."

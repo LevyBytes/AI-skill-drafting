@@ -1,7 +1,0 @@
-{
-  "case": "tauri-comment-flattening",
-  "before": "// When using the Tauri API npm package:import { invoke } from '@tauri-apps/api/core';\n// When using the Tauri global script (if not using the npm package)// Be sure to set `app.withGlobalTauri` in `tauri.conf.json` to trueconst invoke = window.__TAURI__.core.invoke;\n// Invoke the commandinvoke('my_custom_command');\n",
-  "after": "import { invoke } from '@tauri-apps/api/core';\n\n// Invoke the registered command using the npm API.\ninvoke('my_custom_command');\n",
-  "official_source": "https://v2.tauri.app/develop/calling-rust/",
-  "scope": "Captured session example; test comment/newline behavior, not a native Tauri application."
-}

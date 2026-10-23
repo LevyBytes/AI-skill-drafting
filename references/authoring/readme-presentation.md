@@ -22,7 +22,7 @@ For a package with subskills, list every included subskill with its human-readab
 
 Keep relevant start/use instructions and version boundaries. Use the exact source/license section below; it is the only license material a skill carries. Preserve useful package-specific details. Nested operational READMEs retain their own purpose and do not automatically receive this main README layout.
 
-Subskill overview links point to the target skill's README.md; for example, `references/agentfs/README.md`. Task links point to the relevant Markdown reference or readable subject index. Check the destination's contents and follow its routes to the promised material. Do not send README readers through JSON or JSONL routing catalogs, or create Markdown wrappers that merely link to those catalogs. Keep legitimate catalogs for agent routing. Use SKILL.md links only when explicitly directing readers to agent instructions.
+Subskill overview links point to the target skill's README.md; for example, `references/example-product/README.md`. Task links point to the relevant Markdown reference or readable subject index. Check the destination's contents and follow its routes to the promised material. Do not send README readers through JSON or JSONL routing catalogs, or create Markdown wrappers that merely link to those catalogs. Keep legitimate catalogs for agent routing. Use SKILL.md links only when explicitly directing readers to agent instructions.
 
 ## Reusable assets
 

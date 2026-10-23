@@ -8,19 +8,19 @@ avoid caches in the installed package. Review test code before running it.
 
 Pair each real defect with a failing input, repaired output and meaningful assertion:
 
-- Tauri: flattened comments hide imports/calls; retain a reviewed repaired example.
-- Turso/Lumberyard: organize first, then reject repeated ancestors and nested references.
-- Python/Discord/PyMeasure: reject singular/plural ancestor repetition such as
-  `references/reference` and `adapters/adapter`, including separated or empty folders.
+- Flattened comments: lost newlines hide imports/calls; retain a reviewed repaired example.
+- Nested collections: organize first, then reject repeated ancestors and nested references.
+- Ancestor repetition: reject singular/plural repetition such as
+  `references/reference` and `handlers/handler`, including separated or empty folders.
   Preserve distinct qualifiers and exact API identifiers; reject before rendering or
   snapshot creation. Include negative controls for words such as `status` and `news`.
-- PyVISA: distinguish implementation excerpts from API contracts despite shared names.
-- PyMeasure: strict property mocks catch wrong settings; preserve valid delta defaults.
-- Blender/Python/Adobe: preserve preambles, API ownership, complete declarations and
+- Shared names: distinguish implementation excerpts from API contracts with the same names.
+- Dynamic properties: strict property mocks catch wrong settings; preserve valid defaults.
+- Source fidelity: preserve preambles, API ownership, complete declarations and
   tables; catch hidden literals, malformed fences and missing HTML image targets.
-- Common:99/100/101 lines, collisions, missing translations, malformed catalogs,
+- Common: 99/100/101 lines, collisions, missing translations, malformed catalogs,
   frozen-artifact drift, wrong approval, interruption/resume and safe rollback.
-- Adobe paths: reject the captured long names; accept reviewed short destinations.
+- Long paths: reject page titles captured whole as names; accept reviewed short destinations.
   Exercise name lengths 63/64/65, relative paths 159/160/161, single depths 3/4/5,
   collection depths 5/6/7, missing or false collection declarations,
   Unicode code points, binary and empty-directory paths, and product-root prefixes.
@@ -33,9 +33,8 @@ A mock proves only the modeled contract; a native application test proves a diff
 Use adversarial inputs and positive controls to avoid overzealous “repairs”.
 
 The software suite in scripts/tests uses disposable new, repaired and multi-product skills.
-Agent-use tasks and their inputs live separately in evals; their scores require actual runs. A large recorded
-inventory regression exercises path-scale inspection separately; it does not claim that
-every real document was semantically reviewed by a test.
+Agent-use tasks and their inputs live separately in evals; their scores require actual runs.
+A large generated inventory exercises path checks at collection scale.
 
 Record interpreter/dependency versions, passed/failed/not-run checks and exact outputs.
 Do not execute arbitrary code from a proposal as part of verify. Explicitly review and

@@ -12,11 +12,11 @@ languages, missing imports, incorrect method/property names, incomplete declarat
 missing setup and lost callbacks. Check inline literals, HTML components and image URLs.
 Review contracts for lost parameter descriptions, return values and changed namespace case.
 
-Example: a JavaScript line comment joined to `import` or `invoke()` can silently disable
-the example. Restore the complete code and keep npm and global-API alternatives distinct.
-Example: an instrument may require `continuous_sweep_enabled`, while assignment to
-`continuous_sweep` compiles but fails to configure the instrument. Test the actual property.
-Example: a delta marker numbered two may be the valid default. Check its implementation
+Example: a line comment joined to the next line's `import` or call can silently disable
+the example. Restore the complete code and keep alternative setups as distinct examples.
+Example: a client may require `auto_retry_enabled`, while assignment to `auto_retry`
+runs without error but changes nothing. Test the actual property.
+Example: an urgent priority of two may be the valid default. Check its implementation
 before “correcting” it; keep this as a negative control in the regression suite.
 
 Record each correction, exact affected paths, source evidence and behavior check.

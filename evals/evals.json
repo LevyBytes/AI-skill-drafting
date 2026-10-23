@@ -20,8 +20,8 @@
     },
     {
       "id": 2,
-      "prompt": "Repair this spectrum-analyzer skill fixture. Its repeated folders, hash filenames and sweep examples look damaged. Use the accompanying captured source contract, retain distinct guide/API material, and preserve valid behavior and licensing. Stage your correction and explain the evidence and testing limits.",
-      "expected_output": "A complete staged skill with subject-based paths, descriptive filenames, repaired comment/newline structure, the documented sweep property, clear initialization requirements and preserved MARK/DELT2 behavior. The report distinguishes source evidence, syntax/mocks and hardware tests.",
+      "prompt": "Repair this print-queue skill fixture. Its repeated folders, hash filenames and retry examples look damaged. Use the accompanying captured source contract, retain distinct guide/API material, and preserve valid behavior and licensing. Stage your correction and explain the evidence and testing limits.",
+      "expected_output": "A complete staged skill with subject-based paths, descriptive filenames, repaired comment/newline structure, the documented retry property, clear connection requirements and the preserved priority-two default for urgent jobs. The report distinguishes source evidence, syntax/mocks and live queue tests.",
       "files": [
         "evals/files/repair-package.json",
         "evals/files/captured-source-contract.json"
@@ -30,10 +30,10 @@
         "No repeated ancestor names or hash-suffixed reference filenames remain.",
         "Guide and API contract content remain distinct and reachable.",
         "Area assets/scripts/evals placeholders are absent and root scaffolding is correct.",
-        "The example uses continuous_sweep_enabled with intact newlines and initialized fsl context.",
-        "The license is byte-identical and the valid DELT2 default is retained.",
+        "The example uses auto_retry_enabled with intact newlines and a connected client context.",
+        "The license is byte-identical and the valid priority-two default is retained.",
         "Every source file has a disposition and all changed outputs have prepared tasks.",
-        "The report does not claim hardware execution or a fresh source fetch without evidence."
+        "The report does not claim live queue execution or a fresh source fetch without evidence."
       ]
     },
     {

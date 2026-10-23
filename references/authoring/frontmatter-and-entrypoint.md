@@ -14,8 +14,8 @@ Write it as one double-quoted line of dense trigger terms; leave out instruction
 Include indirect requests where useful. Avoid a keyword inventory and competing topics.
 
 ```yaml
-name: instrument-control
-description: "Use when connecting instruments, configuring measurements or debugging VISA communication."
+name: example-skill
+description: "Use when configuring, validating or troubleshooting the example service and its API."
 license: Apache-2.0
 metadata:
   last-updated: "2026-10-15"

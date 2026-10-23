@@ -76,7 +76,7 @@ class Verification(unittest.TestCase):
         self.assertTrue({"repeated_ancestor", "misplaced_empty_template", "suspect_ordinal_or_hash_name", "unreachable_reference"} <= self.codes())
 
     def test_context_outside_root_references(self):
-        self.files["python-api/references/commands.md"] = b"# Commands\n\nContent.\n"
+        self.files["scripting-api/references/commands.md"] = b"# Commands\n\nContent.\n"
         self.assertIn("unrecognized_root_folder", self.codes())
 
     def test_unsafe_paths(self):

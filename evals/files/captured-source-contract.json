@@ -1,11 +1,10 @@
 {
-  "source_url": "https://raw.githubusercontent.com/pymeasure/pymeasure/f095b3742691709b75ba12f309498030d7a963cc/pymeasure/instruments/rohdeschwarz/fsseries.py",
-  "capture_kind": "Narrow source-derived contract from the previously verified PyMeasure fixture; not a newly fetched full document.",
-  "continuous_sweep_property": "continuous_sweep_enabled",
-  "query": "INIT:CONT?",
-  "set_command": "INIT:CONT %s",
-  "delta_marker_default": "DELT2",
-  "ordinary_marker_default": "MARK",
-  "prerequisite": "The fsl variable must refer to an initialized FSL instrument before running the example.",
-  "evidence_limit": "No hardware execution. The fixture supports property spelling, marker defaults and the stated setup requirement."
+  "contract_kind": "Synthetic source contract for the fictional print-queue client in this evaluation; it stands in for a captured upstream source file.",
+  "retry_property": "auto_retry_enabled",
+  "getter": "get_auto_retry()",
+  "setter": "set_auto_retry(enabled)",
+  "urgent_job_default_priority": "2",
+  "ordinary_job_default_priority": "normal",
+  "prerequisite": "The client variable must refer to a connected queue client before running the example.",
+  "evidence_limit": "No live queue execution. The contract supports property spelling, priority defaults and the stated setup requirement."
 }

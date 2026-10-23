@@ -1,5 +1,4 @@
-"""Real Adobe failures and inclusive owner-profile boundary regressions."""
-import json
+"""Long captured-title paths and inclusive owner-profile boundary regressions."""
 from pathlib import Path
 import unittest
 from support import spec, workspace
@@ -110,14 +109,21 @@ class PathLimits(unittest.TestCase):
                     root / "requirements.md", root / "decisions.json")
         self.assertFalse((root / "work").exists())
 
-    def test_captured_adobe_paths(self):
-        fixture = Path(__file__).parent / "fixtures/path-repairs.json"
-        cases = json.loads(fixture.read_text(encoding="utf-8"))["cases"]
-        self.assertEqual(len(cases), 13)
-        for case in cases:
-            with self.subTest(path=case["before"]):
-                self.assertTrue(check_paths([case["before"]], collection=True)["errors"])
-                self.assertEqual(check_paths([case["after"]], collection=True)["errors"], [])
+    def test_captured_title_paths_and_short_repairs(self):
+        # Page titles used whole as folder and file names, and the short subject names that replace them.
+        root = "example-product/references/desktop/manage-projects/shared-settings/"
+        title = "configuring-shared-project-settings-about-configuring-shared-project-settings-for-teams"
+        cases = [
+            (root + title + "/" + title + "-and-reviewers.md", root + "team-settings.md",
+             {"directory_name_limit", "filename_limit", "relative_path_limit"}),
+            (root + "configuring-shared-project-settings-for-teams-and-reviewers/"
+             "sharing-project-presets-between-teams-and-keeping-current.md", root + "project-presets.md",
+             {"relative_path_limit"}),
+        ]
+        for before, after, codes in cases:
+            with self.subTest(path=before):
+                self.assertEqual({e["code"] for e in check_paths([before], collection=True)["errors"]}, codes)
+                self.assertEqual(check_paths([after], collection=True)["errors"], [])
 
     def test_staging_prefix_does_not_spend_package_budget(self):
         files, _ = render(spec())

@@ -140,9 +140,9 @@ function Get-SkillRepository {
     are never searched. With -Skill only the named repositories are returned, and an unknown name throws
     an error that lists every valid name.
 
-    For AI models: the names are the skill folder names under $env:DEVSKILLS, for example gimp or
-    lumberyard. In a command for the owner, write them comma-separated without spaces, as in
-    -Skill gimp,lumberyard. After a space PowerShell passes the next name as a separate argument, and
+    For AI models: the names are the repository folder names directly under $env:DEVSKILLS. In a
+    command for the owner, write them comma-separated without spaces, as in
+    -Skill skill-one,skill-two. After a space PowerShell passes the next name as a separate argument, and
     the scripts refuse it.
 
     .PARAMETER Root

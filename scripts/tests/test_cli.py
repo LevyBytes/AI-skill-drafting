@@ -1,6 +1,7 @@
 import copy
 import json
 import os
+import random
 import subprocess
 import sys
 import unittest
@@ -57,7 +58,7 @@ class CLI(unittest.TestCase):
         self.workflow(value)
 
     def test_large_corpus_workflow(self):
-        # Synthetic coherent areas stress routing/application; real inventory bytes are also carried unchanged.
+        # Synthetic coherent areas stress routing/application; a large binary asset is also carried unchanged.
         extra = {}
         area_links = []
         for area in ("calls", "events", "settings", "types", "methods", "fields", "responses", "requests", "errors", "examples"):
@@ -71,7 +72,7 @@ class CLI(unittest.TestCase):
             extra[f"references/{area}/index.md"] = ("# Contract index\n\n" + "\n".join(entries) + "\n").encode()
             area_links.append(f"- [{area}]({area}/index.md)")
         extra["references/service-setup.md"] = ("# Service setup\n\n" + "\n".join(area_links) + "\n").encode()
-        extra["assets/recorded-inventory.json.gz"] = (PACKAGE / "scripts/tests/fixtures/adobe-inventory.json.gz").read_bytes()
+        extra["assets/sample-archive.bin"] = random.Random(7).randbytes(4 * 1024 * 1024)
         self.workflow(spec(), extra_files=extra)
 
     def test_invalid_json_exit(self):

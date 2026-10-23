@@ -1,14 +1,14 @@
 {
   "fixture_kind": "Synthetic damaged package; API correction is backed by the accompanying captured source contract.",
-  "skill_name": "spectrum-analyzer",
+  "skill_name": "print-queue",
   "files": {
     "LICENSE": "Fixture content is supplied for this evaluation. Preserve this notice verbatim.\n",
-    "references/measurement/measurement/sweep-a12b34c56d.md": "# Sweep example\n\n```python\n# Configure the analyzerfsl.continuous_sweep = False\nfsl.single_sweep()\n```\n",
-    "references/measurement/measurement/sweep-f12b34c56d.md": "# Sweep control contract\n\nThe sweep control reports whether acquisition repeats automatically. This is API contract material, not a runnable example.\n",
-    "references/measurement/assets/.gitkeep": "",
-    "references/measurement/scripts/.gitkeep": "",
-    "references/measurement/evals/.gitkeep": ""
+    "references/jobs/jobs/retry-a12b34c56d.md": "# Retry example\n\n```python\n# Configure the queueclient.auto_retry = False\nclient.submit_job()\n```\n",
+    "references/jobs/jobs/retry-f12b34c56d.md": "# Retry control contract\n\nThe retry control reports whether failed jobs are resubmitted automatically. This is API contract material, not a runnable example.\n",
+    "references/jobs/assets/.gitkeep": "",
+    "references/jobs/scripts/.gitkeep": "",
+    "references/jobs/evals/.gitkeep": ""
   },
-  "preserve_fact": "A default delta marker uses number two. Do not change it to one merely for symmetry.",
+  "preserve_fact": "An urgent job defaults to priority two. Do not change it to one merely for symmetry.",
   "scope": "Stage a complete skill from this file map; preserve distinct guide and API content, the license, and explicit source-version context."
 }

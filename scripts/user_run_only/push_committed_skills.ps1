@@ -34,7 +34,7 @@ push it once yourself with git push -u.
 The folder that holds the skill repositories. Defaults to the DEVSKILLS environment variable.
 
 .PARAMETER Skill
-Only these repositories, by folder name, for example -Skill gimp,lumberyard.
+Only these repositories, by folder name, for example -Skill skill-one,skill-two.
 
 .PARAMETER DryRun
 Asks the human question, prints the plan, and pushes nothing.
@@ -50,7 +50,7 @@ cd $env:DEVSKILLS\skill-drafting
 .\scripts\user_run_only\push_committed_skills.ps1 -DryRun
 
 .EXAMPLE
-.\scripts\user_run_only\push_committed_skills.ps1 -Skill gimp,lumberyard
+.\scripts\user_run_only\push_committed_skills.ps1 -Skill skill-one,skill-two
 
 .NOTES
 Exit codes: 0 finished, cancelled or nothing to do, 1 at least one repository failed, 2 refused or invalid input.
@@ -74,9 +74,9 @@ changes we made so far":
   3. Hand over one PowerShell code block in this order. Use -Skill with the folder names, comma-separated
      and without spaces, or leave it out for every repository. Give the message file's absolute path.
        cd $env:DEVSKILLS\skill-drafting
-       .\scripts\user_run_only\stage_changed_skills.ps1 -Skill gimp,lumberyard
-       .\scripts\user_run_only\commit_staged_skills.ps1 -Skill gimp,lumberyard -MessageFile <absolute path>
-       .\scripts\user_run_only\push_committed_skills.ps1 -Skill gimp,lumberyard
+       .\scripts\user_run_only\stage_changed_skills.ps1 -Skill skill-one,skill-two
+       .\scripts\user_run_only\commit_staged_skills.ps1 -Skill skill-one,skill-two -MessageFile <absolute path>
+       .\scripts\user_run_only\push_committed_skills.ps1 -Skill skill-one,skill-two
   4. Say what each step asks. Staging asks nothing. Committing prints the plan and the message, then asks
      y or n. Pushing first asks "Are you a human?", which the owner answers with the word yes, then prints
      the plan and asks y or n. Offer -DryRun on any step to see its plan without changing anything, and
@@ -107,7 +107,7 @@ if ($Help -or @($Unexpected | Where-Object { $helpWords -contains $_ }).Count -g
 }
 if ($null -ne $Unexpected -and $Unexpected.Count -gt 0) {
     Write-Host ('Unexpected argument(s): {0}. Expected: only the parameters that -Help lists.' -f ($Unexpected -join ' ')) -ForegroundColor Red
-    Write-Host 'Try: separate -Skill names with commas and no spaces, for example -Skill gimp,lumberyard.'
+    Write-Host 'Try: separate -Skill names with commas and no spaces, for example -Skill skill-one,skill-two.'
     exit 2
 }
 

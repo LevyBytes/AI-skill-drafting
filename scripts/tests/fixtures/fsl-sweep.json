@@ -1,9 +1,0 @@
-{
-  "code": "m1 = fsl.create_marker() # create marker 1\n\n# Set standard settings, set to full span\nfsl.continuous_sweep_enabled = False\nfsl.freq_span = '18 GHz'\nfsl.res_bandwidth = \"AUTO\"\nfsl.video_bandwidth = \"AUTO\"\nfsl.sweep_time = \"AUTO\"\n\n# Perform a sweep on full span, set the marker to the peak and some to that marker\nfsl.single_sweep()\nm1.to_peak()\nm1.zoom('20 MHz')\n\n# take data from the zoomed-in region\nfsl.single_sweep()\nx, y = fsl.read_trace()\n\n",
-  "property": "continuous_sweep_enabled",
-  "query": "INIT:CONT?",
-  "set": "INIT:CONT %s",
-  "source": "https://raw.githubusercontent.com/pymeasure/pymeasure/f095b3742691709b75ba12f309498030d7a963cc/pymeasure/instruments/rohdeschwarz/fsseries.py",
-  "example_sha256": "eaf2ebf96f0a0a900b3dc482c8b316238bf5c01acbd2b363af85d058875640e3",
-  "scope": "Actual reviewed staged example against a strict instrument double; no hardware execution."
-}

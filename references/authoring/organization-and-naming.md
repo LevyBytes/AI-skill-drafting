@@ -7,21 +7,21 @@ download buckets, filenames and matching prefixes are evidence, not the final ta
 Group content by context type, using its actual subject, API ownership and workflow.
 Order groups and their routes by the task and its dependencies, never alphabetically.
 Do not use first-letter buckets, lexical ranges or arbitrary entry counts as categories.
-For example, group Firefly references into image generation, image editing, video
-production and audio workflows, not A-C or names beginning with a letter.
+For example, group a product's references into setup, everyday tasks, automation and
+troubleshooting workflows, not A-C or names beginning with a letter.
 Keep guide and API material discoverable together while distinguishing their purpose.
 Preserve exact API owners, case, versions, signatures, parameters and return contracts.
 
 Classify an API by its own behavior and definition. Shared inherited properties and
-boilerplate do not determine its subject: a compositor color node belongs with
-color processing, not geometry attributes merely because both expose properties.
+boilerplate do not determine its subject: a date-formatting helper belongs with
+text formatting, not database access merely because both expose the same base methods.
 Review ambiguous assignments individually. Repair discovered context defects and
 check related routes for the same mistake before accepting the staged skill.
 
 Put context areas inside the main references tree with documents directly in each area.
-Use `references/sql-reference/example.md`, never
-`references/sql-reference/references/example.md`.
-Do not turn an area such as python-api into a separate product because it has a router.
+Use `references/api-reference/example.md`, never
+`references/api-reference/references/example.md`.
+Do not turn an area such as scripting-api into a separate product because it has a router.
 
 The main root has references, assets, scripts and evals. Empty template folders use
 .gitkeep and belong only at the main root or explicitly recognized product roots.
@@ -29,17 +29,17 @@ A genuine multi-product collection can contain product skills with their own tre
 Do not invent additional folders or remove populated folders during scaffold cleanup.
 
 Repair organization before flattening. Check every ancestor, including separated,
-case-varied and singular/plural repeats. `references/reference`, `guilds/guild`,
-`adapters/adapter` and `references/components/reference` are redundant nesting too.
-Use the actual subject to name an area, such as `references/language` for Python's
-language definition. Preserve distinct API class ownership when reorganizing classes.
+case-varied and singular/plural repeats. `references/reference`, `orders/order`,
+`handlers/handler` and `references/topics/reference` are redundant nesting too.
+Use the actual subject to name an area, such as `references/language` for a programming
+language's definition. Preserve distinct API class ownership when reorganizing classes.
 If a redundant layer remains after organization, combine it while preserving contents.
 If names collide, compare both contents, preserve distinct subjects and update indexes.
 Never overwrite the destination or append a hash/counter to avoid the decision.
 
 Name every file for its actual content after splitting. No arbitrary word-count limit.
-Prefer `frontend-to-rust-listener-lifecycle.md` and
-`rust-to-frontend-listener-lifecycle.md` over two direction folders hiding the same vague name.
+Prefer `client-to-server-message-lifecycle.md` and
+`server-to-client-message-lifecycle.md` over two direction folders hiding the same vague name.
 Use categories when many related topics warrant a shared folder, without repeating
 unnecessary words in every descendant path.
 
@@ -68,7 +68,7 @@ Shorten redundant ancestor wording after reading the subject. Do not truncate na
 append counters, raise limits or require Git long-path mode to hide a failing path.
 Check the intended installation prefix separately for host-specific absolute limits.
 
-Use `ui-interaction-actions.md` and `animation-graph-parameter-actions.md` when those
+Use `form-submission-actions.md` and `report-scheduling-actions.md` when those
 are distinct owners. Preserve a genuine identifier such as a named protocol version;
 review deterministic ordinal warnings rather than mechanically stripping digits.
 

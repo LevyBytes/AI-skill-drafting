@@ -1,4 +1,4 @@
-"""Reject real singular/plural nesting while preserving distinct contextual names."""
+"""Reject singular/plural nesting while preserving distinct contextual names."""
 import unittest
 from support import decisions, spec, workspace
 from drafting.ancestor_names import equivalent
@@ -14,15 +14,15 @@ class AncestorNames(unittest.TestCase):
         result = check_paths(directories=[path]) if directory else check_paths([path])
         return [e for e in result["errors"] if e["code"] == "repeated_ancestor"]
 
-    def test_reported_python_path_and_qualified_repair(self):
+    def test_repeated_reference_ancestor_and_qualified_repair(self):
         self.assertEqual(len(self.findings("references/reference/guide.md")), 1)
         self.assertEqual(self.findings("references/language/guide.md"), [])
 
-    def test_reported_discord_and_pymeasure_directories(self):
-        paths = ["references/components/reference", "references/guilds/guild",
-                 "references/adapters/adapter", "references/display/inputs/input",
-                 "references/experiment/listeners/listener", "references/experiment/parameters/parameter",
-                 "references/experiment/workers/worker", "references/instruments/instrument"]
+    def test_singular_plural_directory_ancestors(self):
+        paths = ["references/topics/reference", "references/orders/order",
+                 "references/handlers/handler", "references/forms/fields/field",
+                 "references/billing/invoices/invoice", "references/billing/payments/payment",
+                 "references/billing/accounts/account", "references/reports/report"]
         for path in paths:
             with self.subTest(path=path):
                 self.assertEqual(len(self.findings(path, directory=True)), 1)
@@ -42,7 +42,7 @@ class AncestorNames(unittest.TestCase):
                      ("status", "statuses"), ("analysis", "analyses"), ("index", "indices"),
                      ("index", "indexes"), ("child", "children"), ("matrix", "matrices"),
                      ("vertex", "vertices"), ("datum", "data"), ("id", "ids"),
-                     ("file-type", "files-types"), ("render_pass", "render_passes")):
+                     ("file-type", "files-types"), ("search_box", "search_boxes")):
             with self.subTest(pair=pair):
                 self.assertTrue(equivalent(*pair))
                 self.assertTrue(equivalent(*reversed(pair)))
@@ -72,7 +72,7 @@ class AncestorNames(unittest.TestCase):
 
     def test_all_payload_types_and_collection_prefixes(self):
         for path in ("assets/asset/payload.bin", "evals/eval/case.json", "scripts/script/tool.py",
-                     "product/references/components/reference/example.md"):
+                     "product/references/topics/reference/example.md"):
             files, _ = render(spec())
             files[path] = b"\xff"
             self.assertIn("repeated_ancestor", {e["code"] for e in verify_files(files, "example-skill")["errors"]})

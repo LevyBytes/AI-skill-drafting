@@ -1,9 +1,0 @@
-{
-  "tauri_before_sha256": "a9a00c987f9da579d62f218e7ba712a48f4ee768a9534e327b56947c950b4719",
-  "tauri_after_sha256": "3a8ddbe2b006648eb0b18bc0da6ba6e99ade35d59c38758141a34c854644a2c0",
-  "tauri_source": "https://v2.tauri.app/develop/calling-rust/",
-  "fsl_source": "https://github.com/pymeasure/pymeasure/blob/master/pymeasure/instruments/rohdeschwarz/fsseries.py",
-  "fsl_capture": "pymeasure/instruments/rohdeschwarz/fsseries.py",
-  "fsl_sha256": "4ca633de0610e91711f2e151b9d01076defe052672e6f5a39e3460ab51483a17",
-  "fsl_scope": "Minimal strict-property and marker-default behavior doubles derived from source-backed session checks; not hardware tests."
-}
