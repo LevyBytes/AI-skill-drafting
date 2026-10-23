@@ -25,8 +25,9 @@ for calls and ownership when the host is unavailable. Native execution is separa
 Do not execute fetched or candidate code automatically. Review it, select a bounded
 test and use a disposable environment with explicit capabilities.
 
-Keep licensing and attribution intact. The disclaimer is a source pointer, not a legal
-determination that arbitrary copied source may be republished. Do not ship scraped
+Link the source of any example longer than 40 lines instead of copying it; keep shorter
+general-purpose examples without upstream license headers. The disclaimer is a source
+pointer, not a legal determination that arbitrary copied source may be republished. Do not ship scraped
 corpus artifacts, extraction debris or skill-authoring instructions in product references.
 
 For changed code, the decision record requires captured evidence and a behavior-check

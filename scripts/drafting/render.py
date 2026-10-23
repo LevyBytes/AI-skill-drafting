@@ -1,6 +1,7 @@
 """Render explicit author decisions through one set of actual asset templates."""
 import posixpath
 import json
+import re
 from pathlib import Path
 from string import Template
 import yaml
@@ -13,6 +14,23 @@ ASSETS = Path(__file__).resolve().parents[2] / "assets"
 
 def template(name, **values):
     return Template((ASSETS / name).read_text(encoding="utf-8")).substitute(values)
+
+
+def front_matter(front):
+    """Owner front matter: name and token licenses stay plain; every other text value is one double-quoted line."""
+    def scalar(key, value):
+        plain = key == "name" or (key == "license" and re.fullmatch(r"[A-Za-z0-9.+-]+", value))
+        return value if plain else json.dumps(value, ensure_ascii=False)
+    lines = []
+    for key, value in front.items():
+        if isinstance(value, dict):
+            lines.append(f"{key}:")
+            lines.extend(f"  {k}: {scalar(k, v)}" for k, v in value.items())
+        else:
+            lines.append(f"{key}: {scalar(key, value)}")
+    text = "\n".join(lines)
+    require(yaml.safe_load(text) == front, "Front matter does not round-trip")
+    return text
 
 
 def render(spec):
@@ -53,7 +71,7 @@ def render(spec):
         put(prefix + "references/languages.md", template("languages.md.template", translations="\n".join(language_rows) or "No translated references are bundled. Use the linked English topics and disclose that fallback.", english="\n".join(f'- [{e["topic"]}]({posixpath.relpath(e["file"], "references")})' for e in entries)))
         entries.append({"topic": "Reference Language Selection", "file": "references/languages.md", "summary": "Open when you need a language version of references other than English.", "keywords": ["reference language", "translated references"]})
         put(prefix + "references/topics.json", template("catalog.json.template", owner=json.dumps(root), topics=json.dumps(entries, ensure_ascii=False, indent=2)))
-        put(prefix + "SKILL.md", template("entrypoint.md.template", frontmatter=yaml.safe_dump(front, sort_keys=False, allow_unicode=True).rstrip(), routes="\n".join(routes), source=member["official_source"]))
+        put(prefix + "SKILL.md", template("entrypoint.md.template", frontmatter=front_matter(front), routes="\n".join(routes), source=member["official_source"]))
         for folder in ("assets", "scripts", "evals"):
             put(prefix + folder + "/.gitkeep", b"")
     for path, content in spec.get("files", {}).items():

@@ -24,7 +24,7 @@ prerequisites. Explain deletions; do not treat an exclude disposition as automat
 
 Binary rewrites are not supported by the rewrite checker. Preserve exact binaries or
 record an explicitly reviewed exclusion plus independently supplied replacement.
-Preserve license files exactly unless the owner separately authorizes a license change.
+Preserve the skill's own LICENSE and NOTICE exactly unless the owner separately authorizes a license change.
 This tool profile refuses changes to existing LICENSE, LICENCE, COPYING and NOTICE
 files, including moves. A separately authorized license change needs its own reviewed flow.
 

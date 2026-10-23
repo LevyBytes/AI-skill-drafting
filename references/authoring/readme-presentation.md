@@ -20,7 +20,7 @@ Explain concrete tasks the bundled material helps with and link to useful routes
 
 For a package with subskills, list every included subskill with its human-readable name, relative README.md link and concise purpose. Review nested SKILL.md files and existing routers to distinguish product subskills from reference areas. Label reference areas accurately; do not turn ordinary topic folders into imaginary subskills. Omit an empty subskills section for a single skill.
 
-Keep relevant start/use instructions and version boundaries. Use the exact source/license section below and preserve license and attribution files with their source material. Preserve useful package-specific details. Nested operational READMEs retain their own purpose and do not automatically receive this main README layout.
+Keep relevant start/use instructions and version boundaries. Use the exact source/license section below; it is the only license material a skill carries. Preserve useful package-specific details. Nested operational READMEs retain their own purpose and do not automatically receive this main README layout.
 
 Subskill overview links point to the target skill's README.md; for example, `references/agentfs/README.md`. Task links point to the relevant Markdown reference or readable subject index. Check the destination's contents and follow its routes to the promised material. Do not send README readers through JSON or JSONL routing catalogs, or create Markdown wrappers that merely link to those catalogs. Keep legitimate catalogs for agent routing. Use SKILL.md links only when explicitly directing readers to agent instructions.
 
@@ -59,10 +59,10 @@ End every root and nested README with exactly this section and these two paragra
 
 Skill reference documentation is interpreted content for use in open source projects. Check against [official documentation sources]({{official_source_url}}) when dealing with defects or issues that may come up from interpreting this skill's references.
 
-Licensed under **AGPL-3.0**; see [LICENSE]({{license_relative_path}}). Part of the [Agent Kaizen](https://github.com/LevyBytes/agent-kaizen) skill library.
+Licensed under **Apache-2.0**; see [LICENSE]({{license_relative_path}}). Part of the [Agent Kaizen](https://github.com/LevyBytes/agent-kaizen) skill library.
 ```
 
-No additional paragraphs, attribution lists, bundled-license lists, subheadings or alternate licensing prose belong in this section. Do not add a duplicate license section elsewhere in the README. Preserve the package's license and source-notice files with their source material. Use portable relative LICENSE paths, never VS Code preview URLs. Verify that the official documentation URL opens the relevant primary documentation.
+No additional paragraphs, attribution lists, bundled-license lists, subheadings or alternate licensing prose belong in this section. Do not add a duplicate license section elsewhere in the README. Bundle no upstream license, notice or attribution files, license pages or copyright headers. Use portable relative LICENSE paths, never VS Code preview URLs. Verify that the official documentation URL opens the relevant primary documentation.
 
 ## Capability labels and supporting documents
 

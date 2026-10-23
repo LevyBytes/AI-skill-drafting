@@ -5,18 +5,20 @@ Open when writing a skill trigger, metadata or its main router.
 Use name and description. Optional recognized fields are license, compatibility,
 metadata and allowed-tools. Put custom string values under metadata; no top-level
 covers or triggers. This profile also retires metadata.covers.
-Preserve existing licensing; do not add a compulsory license field beyond agreed scope.
+Set `license` to the identifier of the skill's root LICENSE, such as `Apache-2.0`.
 
 Name matches its containing directory: lowercase letters, digits and single hyphens,
 1–64 characters. Description begins with an actionable “Use when ...” instruction,
 is shorter than 1,024 characters, and describes recognizable user intents.
+Write it as one double-quoted line of dense trigger terms; leave out instructions and notes about the bundle.
 Include indirect requests where useful. Avoid a keyword inventory and competing topics.
 
 ```yaml
 name: instrument-control
-description: Use when connecting instruments, configuring measurements or debugging VISA communication.
+description: "Use when connecting instruments, configuring measurements or debugging VISA communication."
+license: Apache-2.0
 metadata:
-  last-updated: '2026-10-15'
+  last-updated: "2026-10-15"
 ```
 
 Use the actual UTC date when updating; quote it so YAML retains a string.

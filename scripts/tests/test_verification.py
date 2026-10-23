@@ -28,7 +28,7 @@ class Verification(unittest.TestCase):
     def test_structure_mutations(self):
         mutations = {
             "unsupported_frontmatter": ("description:", "covers: bad\ndescription:"),
-            "quoted_utc_date": ("'2026-10-15'", "2026-10-15"),
+            "quoted_utc_date": ('"2026-10-15"', "2026-10-15"),
             "entrypoint_sections": ("# Context Router", "## Task routes"),
             "language_section": ("[Reference Language Selection]", "Extra instruction. [Reference Language Selection]"),
             "source_disclaimer": ("skill's references", "skill's document prose"),

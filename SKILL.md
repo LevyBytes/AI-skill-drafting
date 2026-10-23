@@ -1,9 +1,10 @@
 ---
 name: skill-drafting
-description: Use when creating, substantially revising, repairing or reviewing agent skills; defining activation triggers and context routes; organizing source documentation into coherent references; validating skill packages; or preparing staged changes, source maps, regression tests and approved deployment. Not for writing ordinary application documentation without a skill-authoring task.
-compatibility: Bundled tooling requires Python 3.12 or newer, PyYAML, markdown-it-py and jsonschema. Reading the references requires no runtime or network access.
+description: "Use when creating, substantially revising, repairing or reviewing agent skills; defining activation triggers and context routes; organizing source documentation into coherent references; validating skill packages; or preparing staged changes, source maps, regression tests and approved deployment. Not for writing ordinary application documentation without a skill-authoring task."
+license: Apache-2.0
+compatibility: "Bundled tooling requires Python 3.12 or newer, PyYAML, markdown-it-py and jsonschema. Reading the references requires no runtime or network access."
 metadata:
-  last-updated: "2026-10-16"
+  last-updated: "2026-10-22"
 ---
 
 # Context Router
